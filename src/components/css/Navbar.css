@@ -1,0 +1,111 @@
+/* Navbar background color */
+.navbar {
+  background-color: #007bff !important; /* Dark blue */
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.8rem;
+  color: #fff; /* White text for brand */
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: #f29c11; /* Orange on hover */
+}
+
+/* Navbar items (links) */
+.navbar-nav .nav-item {
+  margin-left: 15px;
+}
+
+.nav-link {
+  color: #fff !important; /* White color for links */
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.nav-link:hover {
+  color: #f29c11 !important; /* Orange color for hover effect */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Navbar Toggle Icon Color */
+.navbar-toggler-icon {
+  background-color: #f29c11; /* Orange color for the toggler icon */
+}
+
+.navbar-toggler {
+  border-color: #f29c11; /* Orange border for the toggle button */
+}
+
+/* Navbar responsiveness */
+@media (max-width: 992px) {
+  .navbar-nav {
+      text-align: center;
+  }
+  .nav-item {
+      margin-bottom: 15px;
+  }
+}
+
+/* Scroll effect - fixed top navbar */
+.navbar.fixed-top {
+  z-index: 9999;
+}
+
+/* When navbar is collapsed (on mobile view) */
+@media (max-width: 576px) {
+  .navbar-collapse {
+      background-color: #1a3d7c; /* Dark blue background for the collapsed navbar */
+      padding-top: 10px;
+  }
+
+  .navbar-nav .nav-item {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  .navbar-toggler-icon {
+      background-color: #fff;  /* White color for the toggler icon */
+  }
+
+  /* Adjusting navbar font size for mobile view */
+  .navbar-brand {
+      font-size: 1.4rem; /* Adjust font size of brand for mobile */
+  }
+
+  .nav-link {
+      font-size: 1rem; /* Smaller font size for links on mobile */
+  }
+}
+
+/* Customizing Navbar on Mobile - Center the content */
+@media (max-width: 576px) {
+  .navbar-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .navbar-brand {
+      margin-bottom: 10px;
+  }
+}

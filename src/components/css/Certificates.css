@@ -1,0 +1,303 @@
+/* src/css/Certificates.css */
+
+.about{
+    font-size: 40px;
+    font-weight: 800;
+    background-color: #fff;  /* Light blue background */
+    padding: 50px 0;
+    color: #007bff;  /* Dark text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+
+.certificates-section {
+    padding: 40px 0;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    /* Good default font */
+}
+
+/* Certificates container grid */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    /* Default to multiple columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* Padding for mobile */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .certificates-container {
+        grid-template-columns: 1fr;
+        /* Single column layout on smaller screens */
+        gap: 20px;
+        /* Reduced gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-container {
+        gap: 15px;
+        /* Even smaller gap on small screens */
+    }
+}
+
+/* Certificate card style */
+/* Certificate card styling */
+.certificate-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 550px;
+    /* Card width limit */
+    margin: 0 auto;
+    /* Centers the card */
+    padding: 20px;
+    /* Padding inside the card */
+    background-color: #fff;
+    /* Background color */
+}
+
+/* Hover effect */
+.certificate-card:hover {
+    background-color: antiquewhite;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* Larger shadow on hover */
+}
+
+/* Mobile responsiveness for certificate card */
+@media (max-width: 768px) {
+    .certificate-card {
+        max-width: 100%;
+        /* Full width on smaller screens */
+        padding: 15px;
+        /* Adjust padding for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-card {
+        padding: 10px;
+        /* Smaller padding on very small screens */
+    }
+}
+
+
+
+/* Certificate thumbnail (Image) */
+/* Certificate thumbnail (Image) */
+.certificate-thumbnail {
+    width: 100%;
+    height: 100%; /* Ensure image fills the height of the container */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    display: block;
+    max-width: 550px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Mobile-specific styles for certificate thumbnail */
+  @media (max-width: 768px) {
+    .certificate-thumbnail {
+      height: 100%; /* Ensures the image fills the container on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .certificate-thumbnail {
+      height: 100%; /* Ensure the image fills the container on very small screens */
+    }
+  }
+  
+
+/* View icon (eye icon) for opening the PDF */
+.view-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-pdf-container:hover .view-icon {
+    opacity: 1;
+    /* Show icon when hovering */
+}
+
+/* Certificate details (title, description, button) */
+.certificate-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.certificate-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Good web font for titles */
+}
+
+.certificate-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.certificate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.certificate-button:hover {
+    background-color: #0056b3;
+}
+
+/* Full-size overlay for PDF */
+.full-size-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Full-size container for the PDF iframe */
+.full-size-container {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Full-size iframe styling */
+.full-size-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Close icon for the full-size overlay */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: #007bff;
+}
+
+/* Mobile responsiveness for full-size overlay */
+@media (max-width: 768px) {
+    .full-size-container {
+        width: 100%;
+        height: 80%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .full-size-iframe {
+        height: 100%;
+    }
+
+    .close-icon {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-size-container {
+        width: 100%;
+        height: 80%;
+        margin-top: 10px;
+    }
+
+    .close-icon {
+        font-size: 20px;
+    }
+}
+
+/* Mobile responsiveness for certificate card */
+@media (max-width: 768px) {
+    .certificate-card {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .certificate-thumbnail {
+        max-width: 100%;
+    }
+
+    .view-icon {
+        font-size: 20px;
+    }
+
+    .certificate-title {
+        font-size: 1rem;
+    }
+
+    .certificate-description {
+        font-size: 0.9rem;
+    }
+
+    .certificate-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-title {
+        font-size: 0.9rem;
+    }
+
+    .certificate-description {
+        font-size: 0.8rem;
+    }
+
+    .certificate-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .view-icon {
+        font-size: 18px;
+    }
+}

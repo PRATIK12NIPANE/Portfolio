@@ -1,0 +1,148 @@
+/* Section styling */
+.home-section {
+    background: #f0f4f8;  /* Light background for the section */
+    height: 100vh;  /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+  }
+  
+  /* Profile image container */
+  .profile-container {
+    margin-bottom: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff; /* White border around the image */
+    padding: 5px;
+    background: #f29c11; /* Orange background to make the image stand out */
+    width: 450px; /* Fixed width for image container */
+    height: 450px; /* Fixed height for image container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; /* Smooth transition for resizing */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+  }
+
+ 
+  
+  /* Responsiveness */
+  @media (max-width: 1200px) {
+    .profile-container {
+      width: 350px; /* Reduce width on medium screens */
+      height: 350px; /* Keep height proportional */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .profile-container {
+      width: 300px; /* Reduce width further on smaller screens */
+      height: 300px; /* Keep height proportional */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      width: 250px; /* Smaller size for mobile screens */
+      height: 250px; /* Keep height proportional */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .profile-container {
+      width: 200px; /* Even smaller on very small screens */
+      height: 200px; /* Keep height proportional */
+    }
+  }
+  
+  /* Profile image */
+  .profile-image {
+    width: 100%; /* Make the image width take up 100% of the container */
+    height: 100%; /* Make the image height take up 100% of the container */
+    object-fit: contain; /* Ensures the image compresses to fit without cropping */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .profile-image:hover {
+    transform: scale(1.1);  /* Image zoom effect on hover */
+  }
+  
+  /* Headline text */
+  .headline {
+    font-size: 2.5rem;
+    color: #007bff; /* Dark Blue */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center; /* Center the text */
+  }
+  
+  /* Subheadline text */
+  .subheadline {
+    font-size: 20px;
+    color: #f29c11; /* Orange */
+    font-weight: 400;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center; /* Center the text */
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: #007bff; /* Dark blue for button */
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensures button aligns properly */
+    margin-top: 20px; /* Add spacing above the button */
+  }
+  
+  /* Button hover effect */
+  .btn-primary:hover {
+    background-color: #f29c11; /* Orange on hover */
+    color: #fff;  /* White text on hover */
+  }
+  
+  /* Animation for text fade-in */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .profile-image {
+      width: 80%; /* Make the image smaller on mobile */
+      height: 80%;
+    }
+  
+    .headline {
+      font-size: 2rem; /* Adjust headline size */
+      margin-top: 15px; /* Reduce margin for smaller screens */
+    }
+  
+    .subheadline {
+      font-size: 1.1rem; /* Adjust subheadline size */
+    }
+  
+    .btn-primary {
+      padding: 10px 25px; /* Adjust padding for smaller screens */
+      font-size: 1rem; /* Reduce font size */
+    }
+  }
+  
+  /* Animations for larger screens */
+  @media (min-width: 992px) {
+    .home-section {
+      padding: 100px 0;
+    }
+  }
+  

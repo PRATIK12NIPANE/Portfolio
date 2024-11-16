@@ -1,0 +1,76 @@
+/* src/components/css/Footer.css */
+
+.footer {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.5rem; /* Increased font size for the creator name */
+    color: #fff; /* White text color */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-link {
+    color: #fff; /* White text for links */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #f29c11; /* Gold color on hover */
+}
+
+.contact-link svg {
+    margin-right: 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    
+    .footer {
+        padding: 30px 15px; /* Reduce padding for mobile */
+    }
+
+    .footer p {
+        font-size: 1.2rem; /* Smaller font size on mobile */
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 20px;
+    }
+
+    .contact-link {
+        margin: 5px 0; /* Stack the links vertically */
+        font-size: 1.1rem; /* Slightly larger font for readability */
+    }
+}
+
+/* Further adjustments for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 1.1rem; /* Reduce font size even more for very small screens */
+    }
+
+    .contact-link {
+        font-size: 1rem; /* Make links smaller on very small screens */
+    }
+}

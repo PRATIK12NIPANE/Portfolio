@@ -1,0 +1,151 @@
+/* src/css/Skills.css */
+.about-h1{
+  font-size: 40px;
+  font-weight: 800;
+  background-color: #f7f7f7;  /* Light blue background */
+  padding: 50px 0;
+  color: #007bff;  /* Dark text color for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Section Styling */
+.skills-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.skills-section .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #007bff;
+  text-transform: uppercase;
+}
+
+/* Container Styling */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid with auto-fill columns */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Category Styling */
+.skills-category {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  overflow: hidden;
+}
+
+.skills-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Title Styling */
+.skills-category-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Skill Item Styling */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skill-item:hover {
+  transform: translateX(10px);
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  color: #0056b3;
+}
+
+/* Skill Name Styling */
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Skill Level Styling */
+.skill-level {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #555;
+  margin-left: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 15px;
+  }
+
+  .skills-category {
+    padding: 20px;
+  }
+
+  .skills-category-title {
+    font-size: 1.4rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .skill-level {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-category-title {
+    font-size: 1.2rem;
+  }
+
+  .skill-item {
+    margin-bottom: 15px;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+}

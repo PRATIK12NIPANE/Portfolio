@@ -1,0 +1,177 @@
+/* src/components/css/Projects.css */
+.about-h1{
+    font-size: 40px;
+    font-weight: 800;
+    background-color: #f29c11;  /* Light blue background */
+    padding: 50px 0;
+    color: #fff;  /* Dark text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+.projects-section {
+    padding: 40px 20px;
+    background-color: #f29c11;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .projects-container-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-slider {
+    position: relative;
+  }
+  
+  .project-slider-content {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-slider-content img,
+  .project-slider-content video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .slider-button.left {
+    left: 10px;
+  }
+  
+  .slider-button.right {
+    right: 10px;
+  }
+  
+  .project-details {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .project-technologies {
+    margin-bottom: 10px;
+  }
+  
+  .tech-badge {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 0.875rem;
+  }
+  
+  .project-learned {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .project-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .project-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-button.live {
+    background-color: #28a745;
+  }
+  
+  .project-button.live:hover {
+    background-color: #218838;
+  }
+  
+  .project-button.github {
+    background-color: #6c757d;
+  }
+  
+  .project-button.github:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-slider-content {
+      padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-slider-content {
+      padding-top: 75%; /* Increase aspect ratio for smaller screens */
+    }
+  }
+  

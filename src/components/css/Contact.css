@@ -1,0 +1,153 @@
+/* Main Contact Section */
+.container-xxl {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* Hero Header */
+  .hero-header {
+    background-color: #007bff; /* Primary color for the header */
+    color: white;
+    padding: 60px 0;
+  }
+  
+  .hero-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-out;
+  }
+  
+  .hero-header .breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hero-header .breadcrumb-item a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .section-title span {
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #007bff;
+    margin: 0 10px;
+  }
+  
+  /* Contact Form */
+  .form-floating {
+    position: relative;
+  }
+  
+  .form-floating input,
+  .form-floating textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .form-floating input:focus,
+  .form-floating textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .form-floating label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    color: #555;
+    transition: all 0.2s ease;
+  }
+  
+  .form-floating input:focus + label,
+  .form-floating textarea:focus + label,
+  .form-floating input:not(:placeholder-shown) + label,
+  .form-floating textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.875rem;
+    color: #007bff;
+    background: white;
+    padding: 0 5px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+  
+  .py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-header h1 {
+      font-size: 2rem;
+    }
+  
+    .section-title {
+      font-size: 1.2rem;
+    }
+  
+    .form-floating input,
+    .form-floating textarea {
+      font-size: 0.875rem;
+    }
+  
+    .form-floating label {
+      font-size: 0.875rem;
+    }
+  
+    .btn-primary {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Icons */
+  .form-floating label::before {
+    content: attr(data-icon);
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+    color: #007bff;
+  }
+  

@@ -1,0 +1,150 @@
+/* src/css/Education.css */
+
+.education-section {
+  padding: 60px 20px;
+  background-color: #f29c11;
+}
+
+
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexibility for smaller screens */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.education-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.education-card:hover {
+  transform: translateY(-10px); /* Lifts the card on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for more depth */
+  background-color: #f0f8ff; /* Subtle background color change */
+}
+
+.education-card h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.education-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.education-card .degree {
+  font-weight: 600;
+  color: #2980b9;
+}
+
+.education-card .duration {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.education-card .description {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.education-card .cgpa {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #27ae60;
+  margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 40px 20px; /* Less padding on mobile */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Smaller title for mobile */
+  }
+
+  .education-container {
+    grid-template-columns: 1fr; /* Stack cards in a single column for smaller screens */
+    gap: 20px; /* Reduced gap */
+  }
+
+  .education-card {
+    padding: 20px; /* Reduce padding inside cards */
+  }
+
+  .education-card h3 {
+    font-size: 1.1rem; /* Smaller institution name on mobile */
+  }
+
+  .education-card p {
+    font-size: 0.9rem; /* Smaller text on mobile */
+  }
+
+  .education-card .degree {
+    font-size: 1rem; /* Slightly smaller degree font */
+  }
+
+  .education-card .duration {
+    font-size: 0.9rem; /* Smaller duration font */
+  }
+
+  .education-card .description {
+    font-size: 0.9rem; /* Smaller description font */
+  }
+
+  .education-card .cgpa {
+    font-size: 0.95rem; /* Smaller CGPA font */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem; /* Further reduce title size */
+  }
+
+  .education-container {
+    padding: 0 10px; /* Less padding for very small screens */
+  }
+
+  .education-card {
+    padding: 15px; /* More compact cards */
+  }
+
+  .education-card h3 {
+    font-size: 1rem; /* Further reduce institution name font */
+  }
+
+  .education-card p {
+    font-size: 0.85rem; /* Smaller text for mobile */
+  }
+
+  .education-card .degree {
+    font-size: 0.9rem; /* Smaller degree text */
+  }
+
+  .education-card .duration {
+    font-size: 0.85rem; /* Smaller duration text */
+  }
+
+  .education-card .description {
+    font-size: 0.85rem; /* Smaller description text */
+  }
+
+  .education-card .cgpa {
+    font-size: 0.9rem; /* Smaller CGPA text */
+  }
+}
